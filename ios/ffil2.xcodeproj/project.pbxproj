@@ -45,6 +45,7 @@
 		482E0B9C42864B109E5FAAEA /* IFKSweepGradient.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 8C128427F3FA46339CE39D87 /* IFKSweepGradient.cikernel */; };
 		6A852D2C1DC448FBA03515E7 /* IFKXorCompositing.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = CB7E370B23E54164BE288C8D /* IFKXorCompositing.cikernel */; };
 		D18D5EF3147C4B54A19AB8AB /* libFastImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46344E3AED744CAB8272741B /* libFastImage.a */; };
+		1DB40F5745144457B649A4AE /* libRNCSlider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CE3244B55342C1A571BF5E /* libRNCSlider.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -360,6 +361,8 @@
 		CB7E370B23E54164BE288C8D /* IFKXorCompositing.cikernel */ = {isa = PBXFileReference; name = "IFKXorCompositing.cikernel"; path = "../node_modules/react-native-image-filter-kit/ios/Resources/IFKXorCompositing.cikernel"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A7CD1C8D37C64AA3A909DE36 /* FastImage.xcodeproj */ = {isa = PBXFileReference; name = "FastImage.xcodeproj"; path = "../node_modules/react-native-fast-image/ios/FastImage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		46344E3AED744CAB8272741B /* libFastImage.a */ = {isa = PBXFileReference; name = "libFastImage.a"; path = "libFastImage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		4838FA1A93A34198A06933E8 /* RNCSlider.xcodeproj */ = {isa = PBXFileReference; name = "RNCSlider.xcodeproj"; path = "../node_modules/@react-native-community/slider/ios/RNCSlider.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		96CE3244B55342C1A571BF5E /* libRNCSlider.a */ = {isa = PBXFileReference; name = "libRNCSlider.a"; path = "libRNCSlider.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +393,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				1EB47CEF52EF41BDAF5B8769 /* libRNImageFilterKit.a in Frameworks */,
 				D18D5EF3147C4B54A19AB8AB /* libFastImage.a in Frameworks */,
+				1DB40F5745144457B649A4AE /* libRNCSlider.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +585,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				439501D8218148C281C62792 /* RNImageFilterKit.xcodeproj */,
 				A7CD1C8D37C64AA3A909DE36 /* FastImage.xcodeproj */,
+				4838FA1A93A34198A06933E8 /* RNCSlider.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1225,13 +1230,12 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ffil2.app/ffil2";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Debug;
@@ -1253,13 +1257,12 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ffil2.app/ffil2";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Release;
@@ -1284,6 +1287,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Debug;
@@ -1307,6 +1311,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Release;
@@ -1336,13 +1341,12 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Debug;
@@ -1372,13 +1376,12 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Release;
@@ -1407,13 +1410,12 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Debug;
@@ -1442,13 +1444,12 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-image-filter-kit/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-fast-image/ios/FastImage/**",
+					"$(SRCROOT)/../node_modules/@react-native-community/slider/ios",
 				);
 			};
 			name = Release;

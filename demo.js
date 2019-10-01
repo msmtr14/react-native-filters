@@ -5,18 +5,10 @@ import {
   ScrollView,
   Text,
   TouchableOpacity,
-  Slider,
   Dimensions
 } from "react-native";
-import {
-  //   SoftLightBlend,
-  //   Emboss,
-  //   Earlybird,
-  //   Invert,
-  //   RadialGradient,
-  ImageFilter
-  //   Brightness
-} from "react-native-image-filter-kit";
+import Slider from "@react-native-community/slider";
+import { ImageFilter } from "react-native-image-filter-kit";
 // import FastImage from "react-native-fast-image";
 
 export default class App extends PureComponent {
@@ -26,7 +18,7 @@ export default class App extends PureComponent {
       width: Dimensions.get("window").width,
       val: 0, // Amount
       step: 0.1,
-      type: "Nightvision",
+      type: "Invert",
       red: 0,
       green: 0,
       blue: 0,
@@ -34,6 +26,7 @@ export default class App extends PureComponent {
       rgba: 10,
       max: 10,
       min: 0,
+      angle: 0,
       data: [
         {
           type: "Invert",
@@ -239,6 +232,7 @@ export default class App extends PureComponent {
   }
 
   render() {
+    // console.warn(this.timer || "Nihihi")
     const {
       val,
       type,
@@ -251,8 +245,10 @@ export default class App extends PureComponent {
       data,
       step,
       max,
-      min
+      min,
+      angle
     } = this.state;
+    const uri = "./parrot.png";
     return (
       <ScrollView style={{ flex: 1 }}>
         <View
@@ -264,9 +260,49 @@ export default class App extends PureComponent {
             width: "100%"
           }}
         >
+          <Text
+            style={{
+              fontWeight: "bold",
+              marginLeft: width * 0.04,
+              marginBottom: 5,
+              color: "black"
+            }}
+          >
+            Angle
+          </Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              width: width * 0.6,
+              marginLeft: width * 0.2
+            }}
+          >
+            <Text>0</Text>
+            <Slider
+              maximumTrackTintColor={"green"}
+              minimumTrackTintColor={"blue"}
+              maximumValue={180}
+              minimumValue={0}
+              onValueChange={val =>
+                setTimeout(() => {
+                  this.setState({ angle: val });
+                }, 250)
+              }
+              step={10}
+              style={{
+                color: "red",
+                width: width * 0.8,
+                // marginLeft: width * 0.1,
+                marginBottom: 30
+              }}
+            />
+            <Text>180</Text>
+          </View>
+
           {type !== "RGBA" ? (
-           ( max !== 0 ||
-            min !== 0) && (
+            (max !== 0 || min !== 0) &&
+            type !== "Invert" && (
               <View>
                 <Text
                   style={{
@@ -278,20 +314,31 @@ export default class App extends PureComponent {
                 >
                   Amount
                 </Text>
-                <Slider
-                  maximumTrackTintColor={"green"}
-                  minimumTrackTintColor={"red"}
-                  maximumValue={max}
-                  minimumValue={min}
-                  onValueChange={val => this.setState({ val })}
-                  step={step}
+                <View
                   style={{
-                    color: "red",
-                    width: width * 0.96,
-                    marginLeft: width * 0.04,
-                    marginBottom: 30
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    width: width * 0.6,
+                    marginLeft: width * 0.2
                   }}
-                />
+                >
+                  <Text>{min}</Text>
+                  <Slider
+                    maximumTrackTintColor={"green"}
+                    minimumTrackTintColor={"red"}
+                    maximumValue={max}
+                    minimumValue={min}
+                    onValueChange={val => this.setState({ val })}
+                    step={step}
+                    style={{
+                      color: "red",
+                      width: width * 0.8,
+                      // marginLeft: width * 0.1,
+                      marginBottom: 30
+                    }}
+                  />
+                  <Text>{max}</Text>
+                </View>
               </View>
             )
           ) : (
@@ -411,9 +458,7 @@ export default class App extends PureComponent {
               marginBottom: 5,
               color: "red"
             }}
-          >
-
-          </Text>
+          ></Text>
           <ImageFilter
             config={{
               // disableCache: true,
@@ -422,7 +467,12 @@ export default class App extends PureComponent {
                 name: "SoftLightBlend",
                 resizeCanvasTo: "dstImage",
                 dstTransform: {
-                  scale: "CONTAIN"
+                  scale: "CONTAIN",
+                  rotate: `${angle}deg`
+                  // offset: {
+                  //   x: 30,
+                  //   y: 40
+                  // }
                 },
 
                 dstImage: {
@@ -430,10 +480,19 @@ export default class App extends PureComponent {
 
                   image: (
                     <Image
-                      style={{ width: width * 0.96, height: 230 }}
-                      source={require("./parrot.png")}
+                      style={{ width: width * 0.96, height: width * 0.96 }}
+                      source={require(uri)}
                       resizeMode={"contain"}
                     />
+                    // <FastImage
+                    //   style={{ width: width * 0.96, height: width * 0.96 }}
+                    //   source={{
+                    //     uri,
+                    //     // headers: { Authorization: "someAuthToken" },
+                    //     // priority: FastImage.priority.high
+                    //   }}
+                    //   // resizeMode={FastImage.resizeMode.contain}
+                    // />
                   )
                 },
                 srcTransform: {
@@ -479,7 +538,8 @@ export default class App extends PureComponent {
                     type: item.type,
                     max: item.max,
                     min: item.min,
-                    step: item.step
+                    step: item.step,
+                    val: 0
                   })
                 }
                 style={{
@@ -509,7 +569,7 @@ export default class App extends PureComponent {
                         image: (
                           <Image
                             style={{ width: 100, height: 100 }}
-                            source={require("./parrot.png")}
+                            source={require(uri)}
                             resizeMode={"contain"}
                           />
                         )

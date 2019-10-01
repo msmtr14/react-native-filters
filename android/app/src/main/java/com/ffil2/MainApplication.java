@@ -3,6 +3,7 @@ package com.ffil2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.slider.ReactSliderPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import iyegoroff.imagefilterkit.ImageFilterKitPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactSliderPackage(),
             new FastImageViewPackage(),
             new ImageFilterKitPackage()
       );
