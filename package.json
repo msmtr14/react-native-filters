@@ -4,15 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "start:android": "cd android && ./gradlew clean && cd ../ && react-native run-android"
   },
   "dependencies": {
-    "@react-native-community/slider": "1.x.x",
+    "@react-native-community/slider": "2.0.0",
     "jetifier": "^1.6.4",
     "react": "16.8.3",
     "react-native": "0.59.9",
-    "react-native-fast-image": "6.0.0",
-    "react-native-image-filter-kit": "0.4.14",
+    "react-native-image-crop-picker": "0.25.2",
+    "react-native-image-filter-kit": "0.5.18",
+    "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10"
   },
   "devDependencies": {

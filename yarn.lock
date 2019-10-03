@@ -843,10 +843,10 @@
     xcode "^2.0.0"
     xmldoc "^0.4.0"
 
-"@react-native-community/slider@1.x.x":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-1.1.4.tgz#ff7438afbc194d61f397e9258d78941c014ac110"
-  integrity sha512-ecs5g1MSonDQdbPMghYkBLvJkXTOPziqVUwDUl9GDjoND+cDZDnOr+0z1IX+SZs2AdUOa8r+r8a7UyNt8MDNrw==
+"@react-native-community/slider@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-2.0.0.tgz#3d68f68db185fb44d812f66d05d2d7842adfd3db"
+  integrity sha512-ORokHwQnwXzas+PYQO+G8IxArRVtw2xZdx2C0wV+oQiKbhDl8DBcM6gGT6dNB3VGxVNesWX/3K0IIfVjp4zH0A==
 
 "@react-navigation/core@^3.5.1":
   version "3.5.1"
@@ -3694,7 +3694,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -4943,22 +4943,22 @@ react-is@^16.5.2, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3, react-is
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.10.1.tgz#0612786bf19df406502d935494f0450b40b8294f"
   integrity sha512-BXUMf9sIOPXXZWqr7+c5SeOKJykyVr2u0UDzEf4LNGc6taGkQe1A9DFD07umCIXz45RLr9oAAwZbAJ0Pkknfaw==
 
-react-native-fast-image@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-6.0.0.tgz#36adb4d27ae83fa7b43192438df95eb00027805c"
-  integrity sha512-9P/0gpCC4IuL2S9J6MPe/1OHprWCuUO7MKmgv+f0CsDYAQsn49yjqwhth1vVTQ8A//wPwVcBp7jEECMaV3/qhw==
+react-native-image-crop-picker@0.25.2:
+  version "0.25.2"
+  resolved "https://registry.yarnpkg.com/react-native-image-crop-picker/-/react-native-image-crop-picker-0.25.2.tgz#241e598e6bd601248c319483c19508f9bc9a203e"
+  integrity sha512-LZX9gJb5q1q6Oo1jXj1FyNEEDkvfynZMeE3M9jhFjJdvknMf/eui7GlmSokzQ4A1MLxKmcLSVDGw2L1HTBAO6A==
 
-react-native-image-filter-kit@0.4.14:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/react-native-image-filter-kit/-/react-native-image-filter-kit-0.4.14.tgz#7329df41af90383f12709f06469a05f5a496cbb6"
-  integrity sha512-EoFFmPUZp9eDkP6rKhSEmAfni1WT+GIoVH3c/SL/5YmmmUMWJWd2j3cFEQLOo4km166K2KP7CgEEwmZTeFQZ8g==
+react-native-image-filter-kit@0.5.18:
+  version "0.5.18"
+  resolved "https://registry.yarnpkg.com/react-native-image-filter-kit/-/react-native-image-filter-kit-0.5.18.tgz#99ede5d60a384d8c5db3a752b2602b09432e007d"
+  integrity sha512-lInvIewhL9kVY/03YPpIYxxq5JnwC5/sU4KFEtYpiGsfoxN5KGxEO0OuSBS4jLgPusCfo4eM2qAqSP+Hz3XBfg==
   dependencies:
     concat-color-matrices "^1.0.0"
     lodash.pick "^4.4.0"
     react-is "^16.5.2"
     rgba-to-rgb "^1.0.2"
     rn-color-matrices "^4.1.0"
-    tiny-invariant "^1.0.4"
+    ts-tiny-invariant "0.0.1"
 
 react-native-safe-area-view@^0.14.1:
   version "0.14.8"
@@ -4973,6 +4973,15 @@ react-native-safe-area-view@^0.14.1:
   integrity sha512-tOxHGQUN83MTmQB4ghoQkibqOdGiX4JQEmeyEv96MKWO/x8T2PJv84ECUos9hD3blPRQwVwSpAid1PPPhrVEaw==
   dependencies:
     debounce "^1.2.0"
+
+react-native-vector-icons@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-6.6.0.tgz#66cf004918eb05d90778d64bd42077c1800d481b"
+  integrity sha512-MImKVx8JEvVVBnaShMr7/yTX4Y062JZMupht1T+IEgbqBj4aQeQ1z2SH4VHWKNtWtppk4kz9gYyUiMWqx6tNSw==
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.6.2"
+    yargs "^13.2.2"
 
 react-native@0.59.9:
   version "0.59.9"
@@ -5905,11 +5914,6 @@ time-stamp@^1.0.0:
   resolved "https://registry.yarnpkg.com/time-stamp/-/time-stamp-1.1.0.tgz#764a5a11af50561921b133f3b44e618687e0f5c3"
   integrity sha1-dkpaEa9QVhkhsTPztE5hhofg9cM=
 
-tiny-invariant@^1.0.4:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.0.6.tgz#b3f9b38835e36a41c843a3b0907a5a7b3755de73"
-  integrity sha512-FOyLWWVjG+aC0UqG76V53yAWdXfH8bO6FNmyZOuUrzDzK8DI3/JRY25UD7+g49JWM1LXwymsKERB+DzI0dTEQA==
-
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -5979,6 +5983,11 @@ tr46@^1.0.1:
   integrity sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
   dependencies:
     punycode "^2.1.0"
+
+ts-tiny-invariant@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/ts-tiny-invariant/-/ts-tiny-invariant-0.0.1.tgz#44ab404ba6aedf093c7a140df46dd64dc0e972e4"
+  integrity sha512-zauJ1x208v/0DMefvIEHNwvGiQiPMEy15mMWDxreaHvKR+f9Esrwl5a7pyG9TAJxAdCGcmwW4k2M2ev9msmJ3Q==
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
@@ -6383,7 +6392,7 @@ yargs-parser@^7.0.0:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@^13.3.0:
+yargs@^13.2.2, yargs@^13.3.0:
   version "13.3.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.3.0.tgz#4c657a55e07e5f2cf947f8a366567c04a0dedc83"
   integrity sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==

@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#989',
   },
   button: {
     backgroundColor: 'blue',
@@ -129,26 +130,6 @@ export default class CropScreen extends Component {
     return (oldH / oldW) * newW;
   }
 
-  //   renderVideo(video) {
-  //     console.log('rendering video');
-  //     return (
-  //       <View style={{height: 300, width: 300}}>
-  //         <Video
-  //           source={{uri: video.uri, type: video.mime}}
-  //           style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
-  //           rate={1}
-  //           paused={false}
-  //           volume={1}
-  //           muted={false}
-  //           resizeMode={'cover'}
-  //           onError={e => console.log(e)}
-  //           onLoad={load => console.log(load)}
-  //           repeat={true}
-  //         />
-  //       </View>
-  //     );
-  //   }
-
   renderImage(image) {
     return (
       <Image
@@ -167,6 +148,7 @@ export default class CropScreen extends Component {
   }
 
   render() {
+    console.warn(this.state.image)
     return (
       <View style={styles.container}>
         <ScrollView>
